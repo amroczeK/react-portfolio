@@ -27,6 +27,9 @@ const MovieDetails = () => {
               <Award key={award.title} title={award.title} description={award.description} />
             ))}
           </Awards>
+          <ImageDisplay>
+            <img src={movie.secondaryImg} alt='movie' />
+          </ImageDisplay>
         </Details>
       )}
     </>
@@ -62,13 +65,38 @@ const Awards = styled.div`
   justify-content: space-around;
 `;
 
+const AwardStyle = styled.div`
+  padding: 5rem;
+  h3 {
+    font-size: 2rem;
+  }
+  .line {
+    width: 100%;
+    background: #23d997;
+    height: 0.5rem;
+    margin: 1rem 0rem;
+  }
+  p {
+    padding: 2rem 0rem;
+  }
+`;
+
+const ImageDisplay = styled.div`
+  min-height: 50vh;
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+`;
+
 const Award = ({ title, description }) => {
   return (
-    <div>
+    <AwardStyle>
       <h3>{title}</h3>
       <div className='line'></div>
       <p>{description}</p>
-    </div>
+    </AwardStyle>
   );
 };
 

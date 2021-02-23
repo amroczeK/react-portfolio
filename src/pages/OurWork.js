@@ -4,15 +4,16 @@ import { MovieState } from '../data/movieState';
 
 import styled from 'styled-components';
 
-
 const OurWork = () => {
   return (
     <Work>
-      {MovieState.map((e, idx) => (
+      {MovieState.map((e) => (
         <Movie>
-          <h2>{e.title}</h2>
+          <Link to={e.url} style={{ textDecoration: 'none' }}>
+            <h2>{e.title}</h2>
+          </Link>
           <div className='line' />
-          <Link>
+          <Link to={e.url} style={{ textDecoration: 'none' }}>
             <img src={e.mainImg} alt={e.mainImg.toString()} />
           </Link>
         </Movie>
@@ -26,6 +27,7 @@ const Work = styled.div`
   overflow: hidden;
   padding: 5rem 10rem; // Align container to Logo and Nav
   h2 {
+    color: white;
     padding: 1rem 0rem;
   }
 `;
@@ -34,7 +36,7 @@ const Movie = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.4rem;
-    background: #cccccc;
+    background: #23d997;
     margin-bottom: 3rem;
   }
   img {
