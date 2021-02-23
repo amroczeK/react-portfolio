@@ -1,9 +1,9 @@
 import React from 'react';
-import clock from '../images/clock.svg';
-import diaphragm from '../images/diaphragm.svg';
-import money from '../images/money.svg';
-import teamwork from '../images/teamwork.svg';
-import home2 from '../images/home2.png';
+import clock from '../data/images/clock.svg';
+import diaphragm from '../data/images/diaphragm.svg';
+import money from '../data/images/money.svg';
+import teamwork from '../data/images/teamwork.svg';
+import home2 from '../data/images/home2.png';
 
 import styled from 'styled-components';
 import { Base, Description, Image } from '../styles';

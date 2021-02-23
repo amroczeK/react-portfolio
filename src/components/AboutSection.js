@@ -1,5 +1,5 @@
 import React from 'react';
-import home1 from '../images/home1.png';
+import home1 from '../data/images/home1.png';
 import { Base, Description, Image, Hide } from '../styles';
 
 const AboutSection = () => {

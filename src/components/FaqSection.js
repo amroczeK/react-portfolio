@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Base, Description, Image } from '../styles';
+import { Base } from '../styles';
 
 const FaqSection = () => {
   return (
