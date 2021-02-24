@@ -26,6 +26,7 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
+  z-index: 1; // Place nav above everything else
   min-height: 10vh;
   display: flex;
   margin: auto;
