@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MovieState } from '../data/movieState';
-
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 import styled from 'styled-components';
 
 const OurWork = () => {
   return (
-    <Work>
+    <Work variants={pageAnimation} initial='hidden' animate='show' exit='exit' style={{ background: '#FFF' }}>
       {MovieState.map((e) => (
         <Movie>
           <Link to={e.url} style={{ textDecoration: 'none' }}>
@@ -22,12 +23,13 @@ const OurWork = () => {
   );
 };
 
-const Work = styled.div`
+// Wrap styled div with motion.div to access variants, inital, animate
+const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem; // Align container to Logo and Nav
   h2 {
-    color: white;
+    color: black;
     padding: 1rem 0rem;
   }
 `;
