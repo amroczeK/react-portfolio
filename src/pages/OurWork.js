@@ -14,8 +14,8 @@ const OurWork = () => {
         <Frame3 variants={slider} />
         <Frame4 variants={slider} />
       </motion.div>
-      {MovieState.map((e) => (
-        <Movie>
+      {MovieState.map((e, idx) => (
+        <Movie key={idx}>
           <Link to={e.url} style={{ textDecoration: 'none' }}>
             <motion.h2 variants={fade}>{e.title}</motion.h2>
           </Link>
@@ -42,7 +42,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.4rem;
