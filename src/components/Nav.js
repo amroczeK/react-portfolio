@@ -26,7 +26,9 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  z-index: 1; // Place nav above everything else
+  z-index: 3; // Place nav above everything else
+  position: sticky; // Sticks nav to top
+  top: 0; // Keep nav at top
   min-height: 10vh;
   display: flex;
   margin: auto;
@@ -50,6 +52,24 @@ const StyledNav = styled.nav`
   li {
     padding-left: 10rem;
     position: relative;
+  }
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    // Must add display: inline-block to modify margin on a tag
+    // They are inline by default, can't add padding/margin top and bottom
+    #logo {
+      display: inline-block;
+      margin: 2rem;
+    }
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+      li {
+        padding: 0;
+      }
+    }
   }
 `;
 

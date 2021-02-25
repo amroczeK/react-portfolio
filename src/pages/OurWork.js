@@ -2,12 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MovieState } from '../data/movieState';
 import { motion } from 'framer-motion';
-import { pageAnimation, fade, photoAnimation, lineAnimation, slider, sliderContainer } from '../animation';
+import {
+  pageAnimation,
+  fade,
+  photoAnimation,
+  lineAnimation,
+  slider,
+  sliderContainer,
+} from '../animation';
 import styled from 'styled-components';
+import ScrollTop from '../components/ScrollTop';
 
 const OurWork = () => {
   return (
-    <Work variants={pageAnimation} initial='hidden' animate='show' exit='exit' style={{ background: '#FFF' }}>
+    <Work
+      variants={pageAnimation}
+      initial='hidden'
+      animate='show'
+      exit='exit'
+      style={{ background: '#FFF' }}
+    >
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider} />
         <Frame2 variants={slider} />
@@ -39,6 +54,9 @@ const Work = styled(motion.div)`
   h2 {
     color: #1b1b1b;
     padding: 1rem 0rem;
+  }
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
   }
 `;
 

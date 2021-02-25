@@ -6,9 +6,16 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
+html {
+  @media (max-width: 1300px){
+    font-size: 80%;
+  }
+}
+
 body {
   background: #1b1b1b;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden; // Fixes being able to scroll x-axis due to image scaling up
 }
 
 button {

@@ -38,6 +38,16 @@ const MovieDetails = () => {
   );
 };
 
+const Award = ({ title, description }) => {
+  return (
+    <AwardStyle>
+      <h3>{title}</h3>
+      <div className='line'></div>
+      <p>{description}</p>
+    </AwardStyle>
+  );
+};
+
 // Wrap styled div with motion.div to access variants, inital, animate
 const Details = styled(motion.div)`
   color: white;
@@ -66,6 +76,10 @@ const Awards = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 const AwardStyle = styled.div`
@@ -92,15 +106,5 @@ const ImageDisplay = styled.div`
     object-fit: cover;
   }
 `;
-
-const Award = ({ title, description }) => {
-  return (
-    <AwardStyle>
-      <h3>{title}</h3>
-      <div className='line'></div>
-      <p>{description}</p>
-    </AwardStyle>
-  );
-};
 
 export default MovieDetails;

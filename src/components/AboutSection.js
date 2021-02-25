@@ -4,20 +4,12 @@ import { Base, Description, Image, Hide } from '../styles';
 import { motion } from 'framer-motion';
 import { titleAnimation, fade, photoAnimation } from '../animation';
 import Wave from './Wave';
+import ScrollTop from '../components/ScrollTop';
 
 const AboutSection = () => {
-  // const titleAnimation = {
-  //   hidden: { opacity: 0 },
-  //   show: { opacity: 1, transition: { duration: 2 } },
-  // };
-
-  // const container = {
-  //   hidden: { x: 100 },
-  //   show: { x: 0, transition: { duration: 0.75, ease: 'easeOut', staggerChildren: 1 } },
-  // };
-
   return (
     <Base>
+      <ScrollTop />
       <Description>
         <motion.div className='title'>
           <Hide>
