@@ -2,6 +2,8 @@
 
 This portfolio is developed in React, utilizing styled-components for styling and framer-motion for animations.
 
+![Alt text](./preview.PNG?raw=true 'Preview')
+
 ## Available Scripts
 
 In the project directory, you can run:
