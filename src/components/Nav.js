@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Nav = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
+
   return (
     <StyledNav>
       <h1>
